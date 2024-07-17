@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Ten dang nhap <span id="res"></span></p>
+
+    <script>
+        let obj=[{name:"Le Meo", age:4}, {name:"Le Tho", age:7}];
+        let user="Le Meo";
+
+        localStorage.setItem("username", user)
+        if(localStorage.getItem("username")){
+            let info = localStorage.getItem("username");
+            res.innerHTML = info;
+
+        }
+
+        localStorage.setItem("obj", JSON.stringify(obj))
+        if(localStorage.getItem("obj")){
+            let obj1 = JSON.parse(localStorage.getItem("obj"));
+            console.log(obj1)
+        }
+    </script>
+</body>
+</html>
